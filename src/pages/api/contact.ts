@@ -24,9 +24,9 @@ export const POST: APIRoute = async ({ request }) => {
 
   const name = typeof body.name === "string" ? body.name.trim() : "";
   const email = typeof body.email === "string" ? body.email.trim() : "";
+  const phone = typeof body.phone === "string" ? body.phone.trim() : "";
   const projectType =
     typeof body.projectType === "string" ? body.projectType.trim() : "";
-  const budget = typeof body.budget === "string" ? body.budget.trim() : "";
   const message = typeof body.message === "string" ? body.message.trim() : "";
 
   if (!name || !email || !message) {
@@ -54,7 +54,6 @@ export const POST: APIRoute = async ({ request }) => {
     name,
     email,
     projectType: projectTypes.includes(projectType) ? projectType : "Otro",
-    budget,
     message,
   };
 

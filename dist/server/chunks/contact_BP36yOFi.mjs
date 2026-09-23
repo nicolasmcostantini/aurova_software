@@ -24,7 +24,6 @@ var POST = async ({ request }) => {
 	const name = typeof body.name === "string" ? body.name.trim() : "";
 	const email = typeof body.email === "string" ? body.email.trim() : "";
 	const projectType = typeof body.projectType === "string" ? body.projectType.trim() : "";
-	const budget = typeof body.budget === "string" ? body.budget.trim() : "";
 	const message = typeof body.message === "string" ? body.message.trim() : "";
 	if (!name || !email || !message) return new Response(JSON.stringify({ error: "Completa los campos obligatorios" }), {
 		status: 400,
@@ -42,7 +41,6 @@ var POST = async ({ request }) => {
 		name,
 		email,
 		projectType: projectTypes.includes(projectType) ? projectType : "Otro",
-		budget,
 		message
 	};
 	console.info("[contact]", JSON.stringify(payload));

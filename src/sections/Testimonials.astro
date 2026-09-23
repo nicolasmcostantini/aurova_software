@@ -1,0 +1,62 @@
+---
+const testimonials = [
+  {
+    quote:
+      "La landing superó nuestras expectativas. En tres semanas ya estábamos recibiendo solicitudes de forma constante.",
+    name: "Lucía Fernández",
+    role: "CEO · Nómada Ediciones",
+    initials: "LF",
+  },
+  {
+    quote:
+      "El ecommerce fue un antes y un después para la marca. Atención impecable y una tienda rapidísima.",
+    name: "Marcos Gutiérrez",
+    role: "Fundador · Botánica Store",
+    initials: "MG",
+  },
+  {
+    quote:
+      "Automatizaron procesos que nos quitaban horas cada semana. El mejor equipo con el que hemos trabajado.",
+    name: "Andrea Ruiz",
+    role: "Directora · Contabilidad Clara",
+    initials: "AR",
+  },
+];
+---
+
+<section id="opiniones" class="scroll-mt-24 bg-white py-20 sm:py-28">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8">
+    <div class="max-w-2xl">
+      <p class="text-sm font-semibold uppercase tracking-widest text-brand-600">Opiniones</p>
+      <h2 class="mt-3 font-display text-3xl font-bold tracking-tight text-ink-950 sm:text-4xl">
+        Lo que dicen nuestros clientes
+      </h2>
+    </div>
+
+    <div class="mt-14 grid gap-6 md:grid-cols-3">
+      {testimonials.map((t) => (
+        <figure class="flex flex-col rounded-3xl border border-ink-200/70 bg-ink-50/60 p-7">
+          <div class="flex gap-1 text-brand-500" aria-label="5 de 5 estrellas">
+            {Array.from({ length: 5 }).map((_, i) => (
+              <svg key={i} class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8L12 2z" />
+              </svg>
+            ))}
+          </div>
+          <blockquote class="mt-5 flex-1 text-sm leading-relaxed text-ink-700">
+            “{t.quote}”
+          </blockquote>
+          <figcaption class="mt-6 flex items-center gap-3 border-t border-ink-200/70 pt-5">
+            <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-sm font-semibold text-white">
+              {t.initials}
+            </span>
+            <div>
+              <p class="text-sm font-semibold text-ink-950">{t.name}</p>
+              <p class="text-xs text-ink-500">{t.role}</p>
+            </div>
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>

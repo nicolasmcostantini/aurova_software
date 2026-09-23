@@ -1,0 +1,68 @@
+---
+const stats = [
+  { value: "60+", label: "Proyectos entregados" },
+  { value: "40+", label: "Clientes activos" },
+  { value: "6 años", label: "De experiencia" },
+];
+---
+
+<section id="inicio" class="relative overflow-hidden pt-36 pb-20 sm:pt-44 sm:pb-28">
+  <div class="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
+    <div class="absolute -top-40 left-1/2 h-[520px] w-[900px] -translate-x-1/2 rounded-full bg-gradient-to-b from-brand-100 to-transparent blur-3xl"></div>
+    <div class="absolute top-20 right-0 h-72 w-72 rounded-full bg-brand-200/40 blur-3xl"></div>
+    <div class="absolute bottom-0 -left-20 h-64 w-64 rounded-full bg-brand-100/60 blur-3xl"></div>
+  </div>
+
+  <div class="mx-auto max-w-6xl px-5 sm:px-8">
+    <div class="mx-auto max-w-3xl text-center">
+      <p class="animate-fade-up inline-flex items-center gap-2 rounded-full border border-brand-200 bg-white/70 px-4 py-1.5 text-xs font-semibold text-brand-700 backdrop-blur">
+        <span class="h-1.5 w-1.5 rounded-full bg-brand-500"></span>
+        Agencia de desarrollo web
+      </p>
+
+      <h1 class="animate-fade-up mt-6 font-display text-4xl font-bold leading-[1.1] tracking-tight text-ink-950 sm:text-6xl" style="animation-delay: 80ms">
+        Creamos webs que
+        <span class="relative whitespace-nowrap text-brand-600">
+          convierten
+          <svg class="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 12" fill="none" aria-hidden="true">
+            <path d="M2 9C60 3 140 3 198 9" stroke="currentColor" stroke-width="4" stroke-linecap="round" class="text-brand-200" />
+          </svg>
+        </span>
+        <br />
+        tu idea en negocio
+      </h1>
+
+      <p class="animate-fade-up mx-auto mt-6 max-w-2xl text-lg text-ink-600" style="animation-delay: 160ms">
+        Diseñamos y desarrollamos landings, tiendas online y sistemas web a medida.
+        Código limpio, diseño moderno y un rendimiento que marca la diferencia.
+      </p>
+
+      <div class="animate-fade-up mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row" style="animation-delay: 240ms">
+        <a
+          href="#contacto"
+          class="group inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-ink-950 px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-brand-600 sm:w-auto"
+        >
+          Empieza tu proyecto
+          <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a
+          href="#servicios"
+          class="inline-flex w-full items-center justify-center gap-2 rounded-2xl border border-ink-200 bg-white px-7 py-3.5 text-sm font-semibold text-ink-800 transition-colors hover:border-ink-300 hover:bg-ink-50 sm:w-auto"
+        >
+          Ver servicios
+        </a>
+      </div>
+
+      <dl class="animate-fade-up mx-auto mt-16 grid max-w-xl grid-cols-3 gap-8 border-t border-ink-200/70 pt-8" style="animation-delay: 320ms">
+        {stats.map((stat) => (
+          <div class="text-center">
+            <dt class="order-last mt-1 text-xs font-medium uppercase tracking-wide text-ink-500 sm:text-sm">{stat.label}</dt>
+            <dd class="font-display text-2xl font-bold text-ink-950 sm:text-3xl">{stat.value}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </div>
+</section>

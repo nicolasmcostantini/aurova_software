@@ -1,5 +1,6 @@
 # aurova software — Landing page
 
+
 Landing page moderna y minimalista para la agencia de desarrollo web **aurova software**.
 Construida con [Astro](https://astro.build) + Tailwind CSS v4, sin frameworks de JS.
 
